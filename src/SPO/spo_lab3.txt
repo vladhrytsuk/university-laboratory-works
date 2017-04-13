@@ -1,0 +1,2 @@
+if (perem1 - 60 == 45 / -12) then perem2 = perem3 else perem2 = 356 * 10;
+if (perem4 >= -5) then perem3 = perem5;
