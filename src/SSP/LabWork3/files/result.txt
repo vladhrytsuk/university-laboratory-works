@@ -1,0 +1,559 @@
+
+
+					File: d:\\file2.txt, 1 - page.
+
+Java (programming language)
+From Wikipedia, the free encyclopedia
+Page semi-protected
+Editing of this article by new or unregistered users is currently disabled until December 13, 2018.
+See the protection policy and protection log for more details. If you cannot edit this article and you wish to make a change, you can submit an 
+edit request, discuss changes on the talk page, request unprotection, log in, or create an account.
+"Java language" redirects here. For the natural language from the Indonesian island of Java, see Javanese language.
+This article is about a programming language. For the software package downloaded from java.com, see Java SE.
+Not to be confused with JavaScript.
+Java
+Java programming language logo.svg
+Paradigm	Multi-paradigm: Object-oriented (class-based), structured, imperative, generic, reflective, concurrent
+Designed by	James Gosling
+Developer	Sun Microsystems (now owned by Oracle Corporation)
+First appeared	May 23, 1995; 21 years ago[1]
+Typing discipline	Static, strong, safe, nominative, manifest
+License	GNU General Public License, Java Community Process
+Filename extensions	.java, .class, .jar
+Website	www.oracle.com/java/
+Major implementations
+OpenJDK, GNU Compiler for Java (GCJ), many others
+Dialects
+Generic Java, Pizza
+Influenced by
+Ada 83, C++,[2] C#,[3] Eiffel,[4] Generic Java, Mesa,[5] Modula-3,[6] Oberon,[7] Objective-C,[8] UCSD Pascal,[9][10] Object Pascal[11]
+Influenced
+Ada 2005, BeanShell, C#, Chapel,[12] Clojure, ECMAScript, Fantom, Groovy, Hack,[13] Haxe, J#, JavaScript, Kotlin, PHP, Python, Scala, Seed7, Vala
+ Java Programming at Wikibooks
+Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to 
+have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA),[15] meaning 
+that compiled Java code can run on all platforms that support Java without the need for recompilation.[16] Java applications are typically 
+compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture. As of 2016, Java is one of the 
+most popular programming languages in use,[17][18][19][20] particularly for client-server web applications, with a reported 9 million
+ developers.[21] Java was originally developed by James Gosling at Sun Microsystems (which has since been acquired by Oracle Corporation)
+ and released in 1995 as a core component of Sun Microsystems' Java platform. The language derives much of its syntax from C and C++,
+ but it has fewer low-level facilities than either of them.
+
+The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun 
+under proprietary licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of
+ its Java technologies under the GNU General Public License. Others have also developed alternative implementations of these Sun 
+ technologies, such as the GNU Compiler for Java (bytecode compiler), GNU Classpath (standard libraries), and IcedTea-Web (browser plugin for applets).
+
+The latest version is Java 8, which is the only version currently supported for free by Oracle, although earlier versions are 
+supported both by Oracle and other companies on a commercial basis.
+
+Contents  [hide] 
+1	History
+1.1	Principles
+1.2	Versions
+2	Practices
+2.1	Java platform
+2.1.1	Implementations
+2.1.2	Performance
+2.2	Automatic memory management
+3	Syntax
+4	Examples
+4.1	"Hello, world!" program
+4.2	Comprehensive example
+
+
+					File: d:\\file2.txt, 2 - page.
+
+5	Special classes
+5.1	Applet
+5.2	Servlet
+5.3	JavaServer Pages
+5.4	Swing application
+5.5	Generics
+6	Criticism
+7	Use outside of the Java platform
+7.1	Android
+7.1.1	Controversy
+8	Class libraries
+9	Documentation
+10	Editions
+11	See also
+11.1	Comparison of Java with other languages
+12	Notes
+13	References
+14	External links
+History
+See also: Java (software platform) § History
+
+Duke, the Java mascot
+
+James Gosling, the creator of Java (2008)
+
+The TIOBE programming language popularity index graph from 2002 to 2015. Over the course of a decade Java (blue) and C (black) competing for the top position.
+James Gosling, Mike Sheridan, and Patrick Naughton initiated the Java language project in June 1991.[22] Java was originally 
+designed for interactive television, but it was too advanced for the digital cable television industry at the time.[23] The 
+language was initially called Oak after an oak tree that stood outside Gosling's office. Later the project went by the name 
+Green and was finally renamed Java, from Java coffee.[24] Gosling designed Java with a C/C++-style syntax that system and 
+application programmers would find familiar.[25]
+
+Sun Microsystems released the first public implementation as Java 1.0 in 1995.[26] It promised "Write Once, Run Anywhere" 
+(WORA), providing no-cost run-times on popular platforms. Fairly secure and featuring configurable security, it allowed network-
+ and file-access restrictions. Major web browsers soon incorporated the ability to run Java applets within web pages, and Java 
+ quickly became popular, while mostly outside of browsers, that wasn't the original plan. In January 2016, Oracle announced that 
+ Java runtime environments based on JDK 9 will discontinue the browser plugin.[27] The Java 1.0 compiler was re-written in Java
+ by Arthur van Hoff to comply strictly with the Java 1.0 language specification.[28] With the advent of Java 2 (released 
+ initially as J2SE 1.2 in December 1998 – 1999), new versions had multiple configurations built for different types of platforms.
+ J2EE included technologies and APIs for enterprise applications typically run in server environments, while J2ME featured APIs
+ optimized for mobile applications. The desktop version was renamed J2SE. In 2006, for marketing purposes, Sun renamed new J2 
+ versions as Java EE, Java ME, and Java SE, respectively.
+
+In 1997, Sun Microsystems approached the ISO/IEC JTC 1 standards body and later the Ecma International to formalize Java, 
+but it soon withdrew from the process.[29][30][31] Java remains a de facto standard, controlled through the Java Community 
+Process.[32] At one time, Sun made most of its Java implementations available without charge, despite their proprietary
+ software status. Sun generated revenue from Java through the selling of licenses for specialized products such as the Java Enterprise System.
+
+
+					File: d:\\file3.txt, 3 - page.
+
+Java (programming language)
+From Wikipedia, the free encyclopedia
+Page semi-protected
+Editing of this article by new or unregistered users is currently disabled until December 13, 2018.
+See the protection policy and protection log for more details. If you cannot edit this article and you wish to make a change, you can submit an 
+edit request, discuss changes on the talk page, request unprotection, log in, or create an account.
+"Java language" redirects here. For the natural language from the Indonesian island of Java, see Javanese language.
+This article is about a programming language. For the software package downloaded from java.com, see Java SE.
+Not to be confused with JavaScript.
+Java
+Java programming language logo.svg
+Paradigm	Multi-paradigm: Object-oriented (class-based), structured, imperative, generic, reflective, concurrent
+Designed by	James Gosling
+Developer	Sun Microsystems (now owned by Oracle Corporation)
+First appeared	May 23, 1995; 21 years ago[1]
+Typing discipline	Static, strong, safe, nominative, manifest
+License	GNU General Public License, Java Community Process
+Filename extensions	.java, .class, .jar
+Website	www.oracle.com/java/
+Major implementations
+OpenJDK, GNU Compiler for Java (GCJ), many others
+Dialects
+Generic Java, Pizza
+Influenced by
+Ada 83, C++,[2] C#,[3] Eiffel,[4] Generic Java, Mesa,[5] Modula-3,[6] Oberon,[7] Objective-C,[8] UCSD Pascal,[9][10] Object Pascal[11]
+Influenced
+Ada 2005, BeanShell, C#, Chapel,[12] Clojure, ECMAScript, Fantom, Groovy, Hack,[13] Haxe, J#, JavaScript, Kotlin, PHP, Python, Scala, Seed7, Vala
+ Java Programming at Wikibooks
+Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to 
+have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA),[15] meaning 
+that compiled Java code can run on all platforms that support Java without the need for recompilation.[16] Java applications are typically 
+compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture. As of 2016, Java is one of the 
+most popular programming languages in use,[17][18][19][20] particularly for client-server web applications, with a reported 9 million
+ developers.[21] Java was originally developed by James Gosling at Sun Microsystems (which has since been acquired by Oracle Corporation)
+ and released in 1995 as a core component of Sun Microsystems' Java platform. The language derives much of its syntax from C and C++,
+ but it has fewer low-level facilities than either of them.
+
+The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun 
+under proprietary licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of
+ its Java technologies under the GNU General Public License. Others have also developed alternative implementations of these Sun 
+ technologies, such as the GNU Compiler for Java (bytecode compiler), GNU Classpath (standard libraries), and IcedTea-Web (browser plugin for applets).
+
+The latest version is Java 8, which is the only version currently supported for free by Oracle, although earlier versions are 
+supported both by Oracle and other companies on a commercial basis.
+
+Contents  [hide] 
+1	History
+1.1	Principles
+1.2	Versions
+2	Practices
+2.1	Java platform
+2.1.1	Implementations
+2.1.2	Performance
+2.2	Automatic memory management
+3	Syntax
+4	Examples
+4.1	"Hello, world!" program
+4.2	Comprehensive example
+
+
+					File: d:\\file3.txt, 4 - page.
+
+5	Special classes
+5.1	Applet
+5.2	Servlet
+5.3	JavaServer Pages
+5.4	Swing application
+5.5	Generics
+6	Criticism
+7	Use outside of the Java platform
+7.1	Android
+7.1.1	Controversy
+8	Class libraries
+9	Documentation
+10	Editions
+11	See also
+11.1	Comparison of Java with other languages
+12	Notes
+13	References
+14	External links
+History
+See also: Java (software platform) § History
+
+Duke, the Java mascot
+
+James Gosling, the creator of Java (2008)
+
+The TIOBE programming language popularity index graph from 2002 to 2015. Over the course of a decade Java (blue) and C (black) competing for the top position.
+James Gosling, Mike Sheridan, and Patrick Naughton initiated the Java language project in June 1991.[22] Java was originally 
+designed for interactive television, but it was too advanced for the digital cable television industry at the time.[23] The 
+language was initially called Oak after an oak tree that stood outside Gosling's office. Later the project went by the name 
+Green and was finally renamed Java, from Java coffee.[24] Gosling designed Java with a C/C++-style syntax that system and 
+application programmers would find familiar.[25]
+
+Sun Microsystems released the first public implementation as Java 1.0 in 1995.[26] It promised "Write Once, Run Anywhere" 
+(WORA), providing no-cost run-times on popular platforms. Fairly secure and featuring configurable security, it allowed network-
+ and file-access restrictions. Major web browsers soon incorporated the ability to run Java applets within web pages, and Java 
+ quickly became popular, while mostly outside of browsers, that wasn't the original plan. In January 2016, Oracle announced that 
+ Java runtime environments based on JDK 9 will discontinue the browser plugin.[27] The Java 1.0 compiler was re-written in Java
+ by Arthur van Hoff to comply strictly with the Java 1.0 language specification.[28] With the advent of Java 2 (released 
+ initially as J2SE 1.2 in December 1998 – 1999), new versions had multiple configurations built for different types of platforms.
+ J2EE included technologies and APIs for enterprise applications typically run in server environments, while J2ME featured APIs
+ optimized for mobile applications. The desktop version was renamed J2SE. In 2006, for marketing purposes, Sun renamed new J2 
+ versions as Java EE, Java ME, and Java SE, respectively.
+
+In 1997, Sun Microsystems approached the ISO/IEC JTC 1 standards body and later the Ecma International to formalize Java, 
+but it soon withdrew from the process.[29][30][31] Java remains a de facto standard, controlled through the Java Community 
+Process.[32] At one time, Sun made most of its Java implementations available without charge, despite their proprietary
+ software status. Sun generated revenue from Java through the selling of licenses for specialized products such as the Java Enterprise System.
+As in C++ and some other object-oriented languages, variables of Java's primitive data types are 
+either stored directly in fields (for objects) or on the stack (for methods) rather than on the heap, 
+as is commonly true for non-primitive data types (but see escape analysis). This was a conscious decision
+ by Java's designers for performance reasons.
+
+Java contains multiple types of garbage collectors. By default,[citation needed] HotSpot uses the parallel 
+scavenge garbage collector. However, there are also several other garbage collectors that can be used to
+ manage the heap. For 90% of applications in Java, the Concurrent Mark-Sweep (CMS) garbage collector is 
+ sufficient.[46] Oracle aims to replace CMS with the Garbage-First collector (G1).[47]
+
+Syntax
+
+
+					File: d:\\file3.txt, 5 - page.
+
+Main article: Java syntax
+The syntax of Java is largely influenced by C++. Unlike C++, which combines the syntax for structured, 
+generic, and object-oriented programming, Java was built almost exclusively as an object-oriented language.
+[16] All code is written inside classes, and every data item is an object, with the exception of the primitive
+ data types, i.e. integers, floating-point numbers, boolean values, and characters, which are not objects for
+ performance reasons. Java reuses some popular aspects of C++ (such as printf() method).
+
+Unlike C++, Java does not support operator overloading[48] or multiple inheritance for classes, though multiple
+ inheritance is supported for interfaces.[49] This simplifies the language and aids in preventing potential 
+ errors and anti-pattern design.[citation needed]
+
+Java uses comments similar to those of C++. There are three different styles of comments: a single line style
+ marked with two slashes (//), a multiple line style opened with /* and closed with */, and the Javadoc
+ commenting style opened with /** and closed with */. The Javadoc style of commenting allows the user to 
+ run the Javadoc executable to create documentation for the program.
+
+Example:
+
+// This is an example of a single line comment using two slashes
+
+/* This is an example of a multiple line comment using the slash and asterisk.
+ This type of comment can be used to hold a lot of information or deactivate
+ code, but it is very important to remember to close the comment. */
+
+package fibsandlies;
+import java.util.HashMap;
+
+/**
+ * This is an example of a Javadoc comment; Javadoc can compile documentation
+ * from this text. Javadoc comments must immediately precede the class, method, or field being documented.
+ */
+public class FibCalculator extends Fibonacci implements Calculator {
+    private static Map<Integer, Integer> memoized = new HashMap<Integer, Integer>();
+
+    /*
+     * The main method written as follows is used by the JVM as a starting point for the program.
+     */
+    public static void main(String[] args) {
+        memoized.put(1, 1);
+        memoized.put(2, 1);
+        System.out.println(fibonacci(12)); //Get the 12th Fibonacci number and print to console
+    }
+
+    /**
+     * An example of a method written in Java, wrapped in a class.
+     * Given a non-negative number FIBINDEX, returns
+     * the Nth Fibonacci number, where N equals FIBINDEX.
+     * @param fibIndex The index of the Fibonacci number
+     * @return The Fibonacci number
+     */
+    public static int fibonacci(int fibIndex) {
+        if (memoized.containsKey(fibIndex)) {
+            return memoized.get(fibIndex);
+        } else {
+            int answer = fibonacci(fibIndex - 1) + fibonacci(fibIndex - 2);
+            memoized.put(fibIndex, answer);
+            return answer;
+        }
+
+
+					File: d:\\file3.txt, 6 - page.
+
+    }
+}
+Examples
+"Hello, world!" program
+The traditional "Hello, world!" program can be written in Java as:[50]
+
+class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!"); // Prints the string to the console.
+    }
+}
+Source files must be named after the public class they contain, appending the suffix .java, for example, HelloWorldApp.java.
+ It must first be compiled into bytecode, using a Java compiler, producing a file named HelloWorldApp.class.
+ Only then can it be executed, or "launched". The Java source file may only contain one public class, but it 
+ can contain multiple classes with other than public access and any number of public inner classes. When the
+ source file contains multiple classes, make one class "public" and name the source file with that public 
+ class name.
+
+A class that is not declared public may be stored in any .java file. The compiler will generate a class file
+ for each class defined in the source file. The name of the class file is the name of the class, with .class 
+ appended. For class file generation, anonymous classes are treated as if their name were the concatenation 
+ of the name of their enclosing class, a $, and an integer.
+
+The keyword public denotes that a method can be called from code in other classes, or that a class may be 
+used by classes outside the class hierarchy. The class hierarchy is related to the name of the directory in
+which the .java file is located. This is called an access level modifier. Other access level modifiers 
+include the keywords private and protected.
+
+The keyword static in front of a method indicates a static method, which is associated only with the class
+ and not with any specific instance of that class. Only static methods can be invoked without a reference 
+ to an object. Static methods cannot access any class members that are not also static. Methods that are
+ not designated static are instance methods, and require a specific instance of a class to operate.
+
+The keyword void indicates that the main method does not return any value to the caller. If a Java program
+ is to exit with an error code, it must call System.exit() explicitly.
+
+The method name "main" is not a keyword in the Java language. It is simply the name of the method the Java 
+launcher calls to pass control to the program. Java classes that run in managed environments such as applets
+ and Enterprise JavaBeans do not use or need a main() method. A Java program may contain multiple classes
+ that have main methods, which means that the VM needs to be explicitly told which class to launch from.
+
+The main method must accept an array of String objects. By convention, it is referenced as args although 
+any other legal identifier name can be used. Since Java 5, the main method can also use variable arguments,
+ in the form of public static void main(String... args), allowing the main method to be invoked with an
+ arbitrary number of String arguments. The effect of this alternate declaration is semantically identical
+ (the args parameter is still an array of String objects), but it allows an alternative syntax
+ for creating and passing the array.
+
+The Java launcher launches Java by loading a given class (specified on the command line or as an
+ attribute in a JAR) and starting its public static void main(String[]) method. Stand-alone 
+ programs must declare this method explicitly. The String[] args parameter is an array of String 
+ objects containing any arguments passed to the class. The parameters to main are often passed 
+ by means of a command line.
+
+Printing is part of a Java standard library: The System class defines a public static field called out. 
+The out object is an instance of the PrintStream class and provides many methods for printing data to 
+standard out, including println(String) which also appends a new line to the passed string.
+
+
+
+					File: d:\\file3.txt, 7 - page.
+
+The string "Hello World!" is automatically converted to a String object by the compiler.
+
+Comprehensive example
+
+[hide]This section has multiple issues. Please help improve it or discuss these issues on the talk page.
+ (Learn how and when to remove these template messages)
+This section does not cite any sources. (May 2013)
+This section contains instructions, advice, or how-to content. (May 2013)
+// OddEven.java
+import javax.swing.JOptionPane;
+
+public class OddEven {
+
+    private int userInput; // a whole number("int" means integer)
+
+    /**
+     * This is the constructor method. It gets called when an object of the OddEven type
+     * is being created.
+     */
+    public OddEven() {
+        /*
+         * In most Java programs constructors can initialize objects with default values, or create
+         * other objects that this object might use to perform its functions. In some Java programs, the
+         * constructor may simply be an empty function if nothing needs to be initialized prior to the
+         * functioning of the object. In this program's case, an empty constructor would suffice.
+         * A constructor must exist; however, if the user doesn't put one in then the compiler
+         * will create an empty one.
+         */
+    }
+
+    /**
+     * This is the main method. It gets called when this class is run through a Java interpreter.
+     * @param args command line arguments (unused)
+     */
+    public static void main(final String[] args) {
+       /*
+        * This line of code creates a new instance of this class called "number" (also known as an
+        * Object) and initializes it by calling the constructor. The next line of code calls
+        * the "showDialog()" method, which brings up a prompt to ask you for a number.
+        */
+       OddEven number = new OddEven();
+       number.showDialog();
+    }
+
+    public void showDialog() {
+        /*
+         * "try" makes sure nothing goes wrong. If something does,
+         * the interpreter skips to "catch" to see what it should do.
+         */
+        try {
+            /*
+             * The code below brings up a JOptionPane, which is a dialog box
+             * The String returned by the "showInputDialog()" method is converted into
+             * an integer, making the program treat it as a number instead of a word.
+             * After that, this method calls a second method, calculate() that will
+             * display either "Even" or "Odd."
+             */
+            userInput = Integer.parseInt(JOptionPane.showInputDialog("Please enter a number."));
+
+
+					File: d:\\file3.txt, 8 - page.
+
+            calculate();
+        } catch (final NumberFormatException e) {
+            /*
+             * Getting in the catch block means that there was a problem with the format of
+             * the number. Probably some letters were typed in instead of a number.
+             */
+            System.err.println("ERROR: Invalid input. Please type in a numerical value.");
+        }
+    }
+
+    /**
+     * When this gets called, it sends a message to the interpreter.
+     * The interpreter usually shows it on the command prompt (For Windows users)
+     * or the terminal (For *nix users).(Assuming it's open)
+     */
+    private void calculate() {
+        if ((userInput % 2) == 0) {
+            JOptionPane.showMessageDialog(null, "Even");
+        } else {
+            JOptionPane.showMessageDialog(null, "Odd");
+        }
+    }
+}
+The import statement imports the JOptionPane class from the javax.swing package.
+The OddEven class declares a single private field of type int named userInput. Every instance of the OddEven 
+class has its own copy of the userInput field. The private declaration means that no other class can access (read or write) 
+the userInput field.
+OddEven() is a public constructor. Constructors have the same name as the enclosing class they are declared
+ in, and unlike a method, have no return type. A constructor is used to initialize an object that is a newly
+ created instance of the class.
+The calculate() method is declared without the static keyword. This means that the method is invoked using a
+ specific instance of the OddEven class. (The reference used to invoke the method is passed as an undeclared 
+ parameter of type OddEven named this.) The method tests the expression userInput % 2 == 0 using the if 
+ keyword to see if the remainder of dividing the userInput field belonging to the instance of the class by two is zero. 
+ If this expression is true, then it prints Even; if this expression is false it prints Odd. (The calculate method can 
+ be equivalently accessed as this.calculate and the userInput field can be equivalently accessed as this.userInput,
+ which both explicitly use the undeclared this parameter.)
+OddEven number = new OddEven(); declares a local object reference variable in the main method named number.
+ This variable can hold a reference to an object of type OddEven. The declaration initializes number by first
+ creating an instance of the OddEven class, using the new keyword and the OddEven() constructor, and then assigning 
+ this instance to the variable.
+The statement number.showDialog(); calls the calculate method. The instance of OddEven object referenced
+ by the number local variable is used to invoke the method and passed as the undeclared this parameter 
+ to the calculate method.
+userInput = Integer.parseInt(JOptionPane.showInputDialog("Please Enter A Number")); is a statement that converts 
+the type of String to the primitive data type int by using a utility function in the primitive wrapper class Integer.
+Special classes
+
+This section contains instructions, advice, or how-to content. The purpose of Wikipedia is to present facts, 
+not to train. Please help improve this article either by rewriting the how-to content or by moving it to 
+Wikiversity, Wikibooks or Wikivoyage. (January 2012)
+Applet
+Main article: Java applet
+Java applets are programs that are embedded in other applications, typically in a Web page displayed in a web browser.
+
+// Hello.java
+import javax.swing.JApplet;
+import java.awt.Graphics;
+
+
+					File: d:\\file3.txt, 9 - page.
+
+
+public class Hello extends JApplet {
+    public void paintComponent(final Graphics g) {
+        g.drawString("Hello, world!", 65, 95);
+    }
+}
+The import statements direct the Java compiler to include the javax.swing.JApplet and java.awt.Graphics classes in
+ the compilation. The import statement allows these classes to be referenced in the source code using the simple
+ class name (i.e. JApplet) instead of the fully qualified class name (FQCN, i.e. javax.swing.JApplet).
+
+ 
+The Hello class extends (subclasses) the JApplet (Java Applet) class; the JApplet class provides the framework 
+for the host application to display and control the lifecycle of the applet. The JApplet class is a JComponent
+ (Java Graphical Component) which provides the applet with the capability to display a graphical user interface (GUI) and respond to user events.
+
+The Hello class overrides the paintComponent(Graphics) method (additionally indicated with the annotation, 
+supported as of JDK 1.5, Override) inherited from the Container superclass to provide the code to display the 
+applet. The paintComponent() method is passed a Graphics object that contains the graphic context used to 
+display the applet. The paintComponent() method calls the graphic context drawString(String, int, int) method to 
+display the "Hello, world!" string at a pixel offset of (65, 95) from the upper-left corner in the applet's display.
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<!-- Hello.html -->
+<html>
+    <head>
+        <title>Hello World Applet</title>
+    </head>
+    <body>
+        <applet code="Hello.class" width="200" height="200">
+        </applet>
+    </body>
+</html>
+An applet is placed in an HTML document using the <applet> HTML element. The applet tag has three attributes set:
+ code="Hello" specifies the name of the JApplet class and width="200" height="200" sets the pixel width and height
+ of the applet. Applets may also be embedded in HTML using either the object or embed element,[51] although support
+ for these elements by web browsers is inconsistent.[52] However, the applet tag is deprecated, so the object tag
+ is preferred where supported.
+
+The host application, typically a Web browser, instantiates the Hello applet and creates an AppletContext for the applet.
+ Once the applet has initialized itself, it is added to the AWT display hierarchy. The paintComponent() method is 
+ called by the AWT event dispatching thread whenever the display needs the applet to draw itself.
+
+Servlet
+Main article: Java Servlet
+Java Servlet technology provides Web developers with a simple, consistent mechanism for extending the functionality
+ of a Web server and for accessing existing business systems. Servlets are server-side Java EE components that 
+ generate responses (typically HTML pages) to requests (typically HTTP requests) from clients. A servlet can 
+ almost be thought of as an applet that runs on the server side—without a face.
+
+// Hello.java
+import java.io.*;
+import javax.servlet.*;
+
+public class Hello extends GenericServlet {
+    public void service(final ServletRequest request, final ServletResponse response)
+    throws ServletException, IOException {
+        response.setContentType("text/html");
+
+
+					File: d:\\file3.txt, 10 - page.
+
+        final PrintWriter pw = response.getWriter();
+        try {
+            pw.println("Hello, world!");
+        } finally {
+            pw.close();
+        }
+    }
+}

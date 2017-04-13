@@ -1,0 +1,303 @@
+ The traditional "Hello, world!" program can be written in Java as:[50]
+
+class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!"); // Prints the string to the console.
+    }
+}
+Source files must be named after the public class they contain, appending the suffix .java, for example, HelloWorldApp.java.
+ It must first be compiled into bytecode, using a Java compiler, producing a file named HelloWorldApp.class.
+ Only then can it be executed, or "launched". The Java source file may only contain one public class, but it 
+ can contain multiple classes with other than public access and any number of public inner classes. When the
+ source file contains multiple classes, make one class "public" and name the source file with that public 
+ class name.
+
+A class that is not declared public may be stored in any .java file. The compiler will generate a class file
+ for each class defined in the source file. The name of the class file is the name of the class, with .class 
+ appended. For class file generation, anonymous classes are treated as if their name were the concatenation 
+ of the name of their enclosing class, a $, and an integer.
+
+The keyword public denotes that a method can be called from code in other classes, or that a class may be 
+used by classes outside the class hierarchy. The class hierarchy is related to the name of the directory in
+which the .java file is located. This is called an access level modifier. Other access level modifiers 
+include the keywords private and protected.
+
+The keyword static in front of a method indicates a static method, which is associated only with the class
+ and not with any specific instance of that class. Only static methods can be invoked without a reference 
+ to an object. Static methods cannot access any class members that are not also static. Methods that are
+ not designated static are instance methods, and require a specific instance of a class to operate.
+
+The keyword void indicates that the main method does not return any value to the caller. If a Java program
+ is to exit with an error code, it must call System.exit() explicitly.
+
+The method name "main" is not a keyword in the Java language. It is simply the name of the method the Java 
+launcher calls to pass control to the program. Java classes that run in managed environments such as applets
+ and Enterprise JavaBeans do not use or need a main() method. A Java program may contain multiple classes
+ that have main methods, which means that the VM needs to be explicitly told which class to launch from.
+
+The main method must accept an array of String objects. By convention, it is referenced as args although 
+any other legal identifier name can be used. Since Java 5, the main method can also use variable arguments,
+ in the form of public static void main(String... args), allowing the main method to be invoked with an
+ arbitrary number of String arguments. The effect of this alternate declaration is semantically identical
+ (the args parameter is still an array of String objects), but it allows an alternative syntax
+ for creating and passing the array.
+
+The Java launcher launches Java by loading a given class (specified on the command line or as an
+ attribute in a JAR) and starting its public static void main(String[]) method. Stand-alone 
+ programs must declare this method explicitly. The String[] args parameter is an array of String 
+ objects containing any arguments passed to the class. The parameters to main are often passed 
+ by means of a command line.
+
+Printing is part of a Java standard library: The System class defines a public static field called out. 
+The out object is an instance of the PrintStream class and provides many methods for printing data to 
+standard out, including println(String) which also appends a new line to the passed string.
+
+The string "Hello World!" is automatically converted to a String object by the compiler.
+
+Comprehensive example
+
+[hide]This section has multiple issues. Please help improve it or discuss these issues on the talk page.
+ (Learn how and when to remove these template messages)
+This section does not cite any sources. (May 2013)
+This section contains instructions, advice, or how-to content. (May 2013)
+// OddEven.java
+import javax.swing.JOptionPane;
+
+public class OddEven {
+
+    private int userInput; // a whole number("int" means integer)
+
+    /**
+     * This is the constructor method. It gets called when an object of the OddEven type
+     * is being created.
+     */
+    public OddEven() {
+        /*
+         * In most Java programs constructors can initialize objects with default values, or create
+         * other objects that this object might use to perform its functions. In some Java programs, the
+         * constructor may simply be an empty function if nothing needs to be initialized prior to the
+         * functioning of the object. In this program's case, an empty constructor would suffice.
+         * A constructor must exist; however, if the user doesn't put one in then the compiler
+         * will create an empty one.
+         */
+    }
+
+    /**
+     * This is the main method. It gets called when this class is run through a Java interpreter.
+     * @param args command line arguments (unused)
+     */
+    public static void main(final String[] args) {
+       /*
+        * This line of code creates a new instance of this class called "number" (also known as an
+        * Object) and initializes it by calling the constructor. The next line of code calls
+        * the "showDialog()" method, which brings up a prompt to ask you for a number.
+        */
+       OddEven number = new OddEven();
+       number.showDialog();
+    }
+
+    public void showDialog() {
+        /*
+         * "try" makes sure nothing goes wrong. If something does,
+         * the interpreter skips to "catch" to see what it should do.
+         */
+        try {
+            /*
+             * The code below brings up a JOptionPane, which is a dialog box
+             * The String returned by the "showInputDialog()" method is converted into
+             * an integer, making the program treat it as a number instead of a word.
+             * After that, this method calls a second method, calculate() that will
+             * display either "Even" or "Odd."
+             */
+            userInput = Integer.parseInt(JOptionPane.showInputDialog("Please enter a number."));
+            calculate();
+        } catch (final NumberFormatException e) {
+            /*
+             * Getting in the catch block means that there was a problem with the format of
+             * the number. Probably some letters were typed in instead of a number.
+             */
+            System.err.println("ERROR: Invalid input. Please type in a numerical value.");
+        }
+    }
+
+    /**
+     * When this gets called, it sends a message to the interpreter.
+     * The interpreter usually shows it on the command prompt (For Windows users)
+     * or the terminal (For *nix users).(Assuming it's open)
+     */
+    private void calculate() {
+        if ((userInput % 2) == 0) {
+            JOptionPane.showMessageDialog(null, "Even");
+        } else {
+            JOptionPane.showMessageDialog(null, "Odd");
+        }
+    }
+}
+The import statement imports the JOptionPane class from the javax.swing package.
+The OddEven class declares a single private field of type int named userInput. Every instance of the OddEven 
+class has its own copy of the userInput field. The private declaration means that no other class can access (read or write) 
+the userInput field.
+OddEven() is a public constructor. Constructors have the same name as the enclosing class they are declared
+ in, and unlike a method, have no return type. A constructor is used to initialize an object that is a newly
+ created instance of the class.
+The calculate() method is declared without the static keyword. This means that the method is invoked using a
+ specific instance of the OddEven class. (The reference used to invoke the method is passed as an undeclared 
+ parameter of type OddEven named this.) The method tests the expression userInput % 2 == 0 using the if 
+ keyword to see if the remainder of dividing the userInput field belonging to the instance of the class by two is zero. 
+ If this expression is true, then it prints Even; if this expression is false it prints Odd. (The calculate method can 
+ be equivalently accessed as this.calculate and the userInput field can be equivalently accessed as this.userInput,
+ which both explicitly use the undeclared this parameter.)
+OddEven number = new OddEven(); declares a local object reference variable in the main method named number.
+ This variable can hold a reference to an object of type OddEven. The declaration initializes number by first
+ creating an instance of the OddEven class, using the new keyword and the OddEven() constructor, and then assigning 
+ this instance to the variable.
+The statement number.showDialog(); calls the calculate method. The instance of OddEven object referenced
+ by the number local variable is used to invoke the method and passed as the undeclared this parameter 
+ to the calculate method.
+userInput = Integer.parseInt(JOptionPane.showInputDialog("Please Enter A Number")); is a statement that converts 
+the type of String to the primitive data type int by using a utility function in the primitive wrapper class Integer.
+Special classes
+
+This section contains instructions, advice, or how-to content. The purpose of Wikipedia is to present facts, 
+not to train. Please help improve this article either by rewriting the how-to content or by moving it to 
+Wikiversity, Wikibooks or Wikivoyage. (January 2012)
+Applet
+Main article: Java applet
+Java applets are programs that are embedded in other applications, typically in a Web page displayed in a web browser.
+
+// Hello.java
+import javax.swing.JApplet;
+import java.awt.Graphics;
+
+public class Hello extends JApplet {
+    public void paintComponent(final Graphics g) {
+        g.drawString("Hello, world!", 65, 95);
+    }
+}
+The import statements direct the Java compiler to include the javax.swing.JApplet and java.awt.Graphics classes in
+ the compilation. The import statement allows these classes to be referenced in the source code using the simple
+ class name (i.e. JApplet) instead of the fully qualified class name (FQCN, i.e. javax.swing.JApplet).
+
+ 
+The Hello class extends (subclasses) the JApplet (Java Applet) class; the JApplet class provides the framework 
+for the host application to display and control the lifecycle of the applet. The JApplet class is a JComponent
+ (Java Graphical Component) which provides the applet with the capability to display a graphical user interface (GUI) and respond to user events.
+
+The Hello class overrides the paintComponent(Graphics) method (additionally indicated with the annotation, 
+supported as of JDK 1.5, Override) inherited from the Container superclass to provide the code to display the 
+applet. The paintComponent() method is passed a Graphics object that contains the graphic context used to 
+display the applet. The paintComponent() method calls the graphic context drawString(String, int, int) method to 
+display the "Hello, world!" string at a pixel offset of (65, 95) from the upper-left corner in the applet's display.
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<!-- Hello.html -->
+<html>
+    <head>
+        <title>Hello World Applet</title>
+    </head>
+    <body>
+        <applet code="Hello.class" width="200" height="200">
+        </applet>
+    </body>
+</html>
+An applet is placed in an HTML document using the <applet> HTML element. The applet tag has three attributes set:
+ code="Hello" specifies the name of the JApplet class and width="200" height="200" sets the pixel width and height
+ of the applet. Applets may also be embedded in HTML using either the object or embed element,[51] although support
+ for these elements by web browsers is inconsistent.[52] However, the applet tag is deprecated, so the object tag
+ is preferred where supported.
+
+The host application, typically a Web browser, instantiates the Hello applet and creates an AppletContext for the applet.
+ Once the applet has initialized itself, it is added to the AWT display hierarchy. The paintComponent() method is 
+ called by the AWT event dispatching thread whenever the display needs the applet to draw itself.
+
+Servlet
+Main article: Java Servlet
+Java Servlet technology provides Web developers with a simple, consistent mechanism for extending the functionality
+ of a Web server and for accessing existing business systems. Servlets are server-side Java EE components that 
+ generate responses (typically HTML pages) to requests (typically HTTP requests) from clients. A servlet can 
+ almost be thought of as an applet that runs on the server side—without a face.
+
+// Hello.java
+import java.io.*;
+import javax.servlet.*;
+
+public class Hello extends GenericServlet {
+    public void service(final ServletRequest request, final ServletResponse response)
+    throws ServletException, IOException {
+        response.setContentType("text/html");
+        final PrintWriter pw = response.getWriter();
+        try {
+            pw.println("Hello, world!");
+        } finally {
+            pw.close();
+        }
+    }
+}
+The import statements direct the Java compiler to include all the public classes and interfaces from the java.io
+ and javax.servlet packages in the compilation. Packages make Java well suited for large scale applications.
+
+The Hello class extends the GenericServlet class; the GenericServlet class provides the interface for the server
+ to forward requests to the servlet and control the servlet's lifecycle.
+
+The Hello class overrides the service(ServletRequest, ServletResponse) method defined by the Servlet interface
+ to provide the code for the service request handler. The service() method is passed: a ServletRequest object
+ that contains the request from the client and a ServletResponse object used to create the response returned to the client. The service() method declares that it throws the exceptions ServletException and IOException if a problem prevents it from responding to the request.
+
+The setContentType(String) method in the response object is called to set the MIME content type of the returned
+data to "text/html". The getWriter() method in the response returns a PrintWriter object that is used to write 
+the data that is sent to the client. The println(String) method is called to write the "Hello, world!" string to
+ the response and then the close() method is called to close the print writer, which causes the data that has been
+ written to the stream to be returned to the client.
+
+JavaServer Pages
+Main article: JavaServer Pages
+JavaServer Pages (JSP) are server-side Java EE components that generate responses, typically HTML pages, to HTTP
+ requests from clients. JSPs embed Java code in an HTML page by using the special delimiters <% and %>. A JSP is
+ compiled to a Java servlet, a Java application in its own right, the first time it is accessed. After that,
+ the generated servlet creates the response.
+
+Swing application
+Main article: Swing (Java)
+Swing is a graphical user interface library for the Java SE platform. It is possible to specify a different
+ look and feel through the pluggable look and feel system of Swing. Clones of Windows, GTK+ and Motif are 
+ supplied by Sun. Apple also provides an Aqua look and feel for Mac OS X. Where prior implementations of these 
+ looks and feels may have been considered lacking, Swing in Java SE 6 addresses this problem by using more native 
+ GUI widget drawing routines of the underlying platforms.
+
+This example Swing application creates a single window with "Hello, world!" inside:
+
+// Hello.java (Java SE 5)
+import javax.swing.*;
+
+public class Hello extends JFrame {
+    public Hello() {
+        super("hello");
+        super.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        super.add(new JLabel("Hello, world!"));
+        super.pack();
+        super.setVisible(true);
+    }
+
+    public static void main(final String[] args) {
+        new Hello();
+    }
+}
+The first import includes all the public classes and interfaces from the javax.swing package.
+
+The Hello class extends the JFrame class; the JFrame class implements a window with a title bar and a
+ close control.
+
+The Hello() constructor initializes the frame by first calling the superclass constructor, passing the 
+parameter "hello", which is used as the window's title. It then calls the setDefaultCloseOperation(int) 
+method inherited from JFrame to set the default operation when the close control on the title bar is 
+selected to WindowConstants.EXIT_ON_CLOSE – this causes the JFrame to be disposed of when the frame 
+is closed (as opposed to merely hidden), which allows the Java virtual machine to exit and the program 
+to terminate. Next, a JLabel is created for the string "Hello, world!" and the add(Component) method 
+inherited from the Container superclass is called to add the label to the frame. The pack() method
+ inherited from the Window superclass is called to size the window and lay out its contents.
+
+The main() method is called by the Java virtual machine when the program starts. It instantiates a 
+new Hello frame and causes it to be displayed by calling the setVisible(boolean) method inherited 
+from the Component superclass with the boolean parameter true. Once the frame is displayed, exiting 
+the main method does not cause the program to terminate because the AWT event dispatching thread remains
